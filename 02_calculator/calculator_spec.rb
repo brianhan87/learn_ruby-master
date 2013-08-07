@@ -55,9 +55,13 @@ end
 describe "#multiply" do
 
   it "multiplies two numbers" do 
+    multiply(13,2).should == 26
   end
 
   it "multiplies several numbers" do
+    multiply(2,4,3).should == 24
+    multiply(5,5,4,6,10).should == 6000
+    multiply(11,1,1,1,1,1,1,1,1,1,1,1,2).should == 22
   end
 
 end

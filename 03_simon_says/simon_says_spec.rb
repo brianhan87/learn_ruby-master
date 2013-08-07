@@ -28,25 +28,6 @@ describe "Simon says" do
     end
   end
 
-  describe "repeat" do
-    it "should repeat" do
-      repeat("hello").should == "hello hello"
-    end
-
-    # Wait a second! How can you make the "repeat" method
-    # take one *or* two arguments?
-    #
-    # def repeat(string, num = 1)
-    #   # your code here
-    # end
-    #
-    # The important part is num = 1. What happens is if a num isn't given,
-    # then num will fallback on 1, i.e. it has a default value of 1.
-    it "should repeat a number of times" do
-      repeat("hello", 3).should == "hello hello hello"
-    end
-  end
-
   describe "start_of_word" do
     it "returns the first letter" do
       start_of_word("hello", 1).should == "h"
@@ -89,6 +70,25 @@ describe "Simon says" do
 
     it "does capitalize 'little words' at the start of a title" do
       titleize("the bridge over the river kwai").should == "The Bridge over the River Kwai"
+    end
+  end
+
+  describe "repeat" do
+    it "should repeat" do
+      repeat("hello").should == "hello hello"
+    end
+
+    # Wait a second! How can you make the "repeat" method
+    # take one *or* two arguments?
+    #
+    # def repeat(string, num = 1)
+    #   # your code here
+    # end
+    #
+    # The important part is num = 1. What happens is if a num isn't given,
+    # then num will fallback on 1, i.e. it has a default value of 1.
+    it "should repeat a number of times" do
+      repeat("hello", 3).should == "hello hello hello"
     end
   end
 
